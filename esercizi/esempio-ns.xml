@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- This document contains data on Codifica di Testi.
+    Filename: esempions.xml
+    Author: Martina Mele
+    Date: 22/03/2021 -->
+
+
+<TEI xmlns:tei="http://tei/2.0" type="doc">
+
+    <tt.test xmlns:tt="https://angelo.delgrosso/1.0"> <!--associato ns tt all'elemento test-->
+        <figliotest></figliotest> <!--questo elemento eredita il vocabolario ma non ci si riferisce-->
+        <tt.figliotest></tt.figliotest> <!--il vocabolario è tt perché è stato riferito il prefisso-->
+    </tt.test>
+
+    <test xmlns:tt="https://angelo.delgrosso/1.0">
+        <figliotest>
+        <!--figliotest eredita il vocabolario da test perché non è stato usato il prefisso
+        => tutti gli elementi sono identificati dal ns di default-->
+        </figliotest>
+
+        <tei:p> <!--se fosse stato solo <p> => si riferiva al vocabolario test-->
+            ciao <!--questo elemento si riferisce al vocabolario tei-->
+        </tei:p>
+    </test>
+
+    
+</TEI>
+
+    <!--Per una scrittura più ordinata-->
+
+<TEI 
+    xmlns="http://tei/2.0" 
+    xmlns:tt="https://angelo.delgrosso/1.0"
+    type="doc">
+
+    <test> <!--per riferirlo al voc tt => <tt.test>-->
+        <figliotest>
+        <!--tutti gli elementi sono identificati dal ns di default perché non è esplicitato
+        alcun prefisso-->
+        </figliotest>
+
+        <p>
+            ciao
+        </p>
+
+    </test> <!--</tt.test>-->
+
+</TEI>
