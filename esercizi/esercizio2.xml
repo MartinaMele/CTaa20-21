@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: esercizio2.xml
+    Author: Martina Mele
+    Date: 22/03/2021 -->
+
+<noNested>
+    <nested>
+        <figlio>
+            <figliofiglio>Contenuto figliofiglio</figliofiglio>
+            Contenuto nodo figlio. <!--Contenuto testuale-->
+        </figlio>
+        Questo elemento è annidato correttamente <!--Contenuto testuale (nodo)-->
+    </nested> <!--Il contenuto dell'elemento <nested> è misto perché ha due figli: un elemento e un frammento testuale-->
+
+    
+    <nogood>
+
+        <error>
+            Qui ci sono più gerarchie.
+            <!--Errore perché il tag di chisura di <error> si trova dopo la chisura 
+            dell'elemento più esterno (<nogood>) => sovrapposizione-->
+
+    </nogood>
+        </error>
+
+
+</noNested>
+
+

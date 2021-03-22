@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: doc-no-well.xml
+    Author: Martina Mele
+    Date: 22/03/2021 -->
+
+<docu>
+    <element>
+        <figlio>
+            <!--Ho aggiunto un figlio (child) all'elemento <element>-->
+        </figlio>
+        <fratello>
+            <!--Ho aggiunto un fratello (sibling) all'elemento <figlio>-->
+        </fratello>
+
+    </element>
+
+    <nowell>
+        <over> <!--L'elemento <over> è già figlio (child) di <nowell>-->
+        </over>
+
+        <over1>
+            <!--Ho aggiunto un fratello (sibling) all'elemento <over>-->
+        </over1>
+
+    </nowell> <!--Il tag era </noWell> => errore perché la W è minuscola nel tag di apertura-->
+        <!-- </over> Errore perché in questa posizione il tag di chisura di <over> si trovava dopo 
+        la chisura dell'elemento più esterno (<nowell>) => sovrapposizione-->
+</docu>
