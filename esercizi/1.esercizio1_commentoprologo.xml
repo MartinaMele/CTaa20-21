@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Questo è un commento.
+    Filename: esercizio1_commentoprologo.xml
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 15/03/2021 
+    Esercizio: Creare un file .xml ed inserire un prologo con la dichiarazione XML e un commento con le vostre informazioni.-->
+
+
+<CORPO type="doc">
+    <test>
+
+    </test>
+
+</CORPO>
