@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: esercizio5_DTD.xml
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 29/03/2021 
+    Esercizio: Definire i seguenti elementi:
+                - elemento root: TEI
+                - elementi figli:
+                    - header (obbligatorio una occorrenza)
+                    - facsimile (opzionale una occorrenza)
+                    - text (obbligatorio almeno una occorrenza)
+                Gli elementi header, facsimile e text hanno tutti un content model testuale-->
+
+<TEI> <!--elemento radice-->
+
+    <header>
+        Questo è solo testo senza tag figli.
+    </header>
+    
+    <facsimile> <!--è opzionale, potremmo anche non inserirlo-->
+        Questo è solo testo.
+    </facsimile>
+
+    <text>
+        Questo è solo testo.
+    </text>
+
+    <text>
+        Questo è solo testo.
+    </text>
+
+</TEI>

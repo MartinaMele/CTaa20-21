@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: regole_DTD.dtd
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 29/03/2021-->
+
+<!ELEMENT TEI (header,facsimile?,text+) > <!--content model dell'elemento TEI-->
+
+<!ELEMENT header (#PCDATA) > <!--Gli elementi header, facsimile e text hanno tutti un content model testuale-->
+<!ELEMENT facsimile (#PCDATA) > 
+<!ELEMENT text (#PCDATA) > 
