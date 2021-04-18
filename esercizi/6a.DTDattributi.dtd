@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: DTDattributi.dtd
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 29/03/2021
+    Esercizio: 
+                - elemento root: TEI
+                - elementi figli:
+                    - header (obbligatorio una occorrenza)
+                    - facsimile (opzionale una occorrenza)
+                    - text (obbligatorio almeno una occorrenza)
+                * text è un mixed content con possibile elemento <seg>
+
+                Attributi:
+                - header: type:(fixed, CDATA “intestazione”); lang(opzionale, NMTOKEN)
+                - facsimile: source:(obbligatorio); ref(optionale, IDREFS)
+                - text: id(obbligatorio, ID) type(opzionale contenuto testuale)-->
+
+
+<!ELEMENT TEI (header,facsimile?,text+) > <!--content model dell'elemento TEI-->
+
+<!ELEMENT header (#PCDATA) > <!--Gli elementi header, facsimile e text hanno tutti un content model testuale-->
+<!ELEMENT facsimile (#PCDATA) > 
+<!ELEMENT text (#PCDATA|p)* > <!--text è un mixed content-->
+<!ELEMENT p (#PCDATA|seg)* > <!--p è un mixed content-->
+<!ELEMENT seg (#PCDATA) >
+
+<!--Dichiarazione degli attributi-->
+
+<!ATTLIST header type CDATA #FIXED "intestazione">
+<!ATTLIST header lang NMTOKEN #IMPLIED>
+
+
+<!ATTLIST facsimile source CDATA #REQUIRED>
+<!ATTLIST facsimile ref IDREFS #IMPLIED>
+
+<!ATTLIST text id ID #REQUIRED>
+<!ATTLIST text type CDATA #IMPLIED>
