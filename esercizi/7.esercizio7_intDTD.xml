@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: esercizio7_DTDcompleto.xml
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 29/03/2021 
+    Esercizio:
+        - includere all’interno di un documento XML la dichiarazione del tipo, definire internamente gli elementi e
+        gli attributi e validare.
+        - inserire nel prologo di un documento XML la dichiarazione del tipo di documento e validare.
+        Creare un file esterno con estensione .dtd prima di includerlo nel prologo XML.-->
+
+<!--INTERNAL DTD-->
+<!DOCTYPE TEI [
+
+<!ELEMENT TEI (body?,p*,title?,text+) > <!--content model dell'elemento TEI-->
+
+<!ELEMENT body (div1,div2) > <!--contiene una sequenza fissata di altri elementi.-->
+<!ELEMENT p (#PCDATA) > 
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT text (figlio) >
+
+<!ELEMENT div1 (#PCDATA) > 
+<!ELEMENT div2 (#PCDATA) >
+
+<!ELEMENT figlio (#PCDATA|em)* > <!--figlio è un mixed content-->
+<!ELEMENT em (#PCDATA) >
+
+<!--Dichiarazione degli attributi-->
+
+<!ATTLIST body type CDATA #IMPLIED >
+<!ATTLIST div1 type ID #REQUIRED >
+<!ATTLIST div2 type CDATA #IMPLIED >
+
+<!ATTLIST p type ID #REQUIRED >
+<!ATTLIST title element CDATA #FIXED "true" >
+
+<!ATTLIST text lang ID #REQUIRED >
+<!ATTLIST figlio type CDATA #IMPLIED >
+<!ATTLIST em attribute ID #REQUIRED >
+
+]>
+
+<TEI> <!--elemento radice-->
+
+    <body> <!--body può avere zero o una occorenza-->
+        <div1 type="section"></div1> <!--sibling element-->
+        <div2>Questa div contiene solo testo.</div2> <!--sibling element-->
+    </body>
+
+    <p type="one">Elemento testuale.</p> <!--p occorre zero o più volte-->
+    <p type="two">Elemento testuale.</p>
+
+    <title><!--element="true"-->Secondo elemento testuale.</title> <!--title può avere zero o una occorenza-->
+
+    <text lang="it"> <!--elemento padre, può avere una o più occorrenze-->
+        <figlio><em attribute="title">La Gioconda</em> è un'opera di Leonardo Da Vinci.</figlio>  <!--mixed content-->
+    </text>
+   
+
+</TEI>
