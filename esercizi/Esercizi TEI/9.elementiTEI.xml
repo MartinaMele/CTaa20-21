@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: 9.elementiTEI.xml
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 06/05/2022 
+    Esercizio: Utilizzare puntatori, note, lista, glossario marcare nomi, rs, term.
+-->
+
+<!DOCTYPE TEI SYSTEM "./tei_all.dtd">
+
+<TEI xmlns="http://www.teic.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Ricetta del pancake allo sciroppo d'acero</title>
+
+                <respStmt xml:id="MM">
+                    <resp>Codifica XML TEI a cura di</resp>
+                    <name type="person">Martina Mele</name> 
+                </respStmt>
+            </titleStmt>
+
+            <extent>ca. 3000 caratteri</extent> <!-- elemento facoltativo, descrive l'ampiezza del documento-->
+
+            <publicationStmt> <!-- elemento obbligatorio -->
+                <authority>Martina Mele</authority>
+                <pubPlace>Pisa</pubPlace>
+                <date>maggio 2022</date>
+                <availability status="restricted"><p>La lettura del documento è riservata al professore <persName><forename>Angelo</forename> <forename>Mario</forename> <surname>Del Grosso</surname></persName>.</p></availability>
+            </publicationStmt>
+
+            <sourceDesc> <!-- elemento obbligatorio -->
+               <p>Born digital</p> <!-- Dalle linee guida: "<sourceDesc> describes the source(s) from which 
+                                    an electronic text was derived or generated [...],
+                                    or a phrase such as "born digital" for a text which has no previous existence."-->
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <p>Codifica effettuata seguendo le linee guida della TEI P5.</p>
+        </encodingDesc>
+
+    </teiHeader>
+
+    <text>
+        <front>
+        </front>
+
+        <body>
+            <div type="section" n="1" xml:id="presentazione">
+                <head>Pancake allo sciroppo d'acero</head>
+                <p> Non c'è colazione migliore che quella fatta con calma, 
+                con i pancake allo sciroppo d'acero<ptr target="https://ricette.giallozafferano.it/Pancakes-allo-sciroppo-d-acero.html"/>! 
+                Soffici frittelle da servire alla maniera classica, con lo sciroppo appunto, 
+                oppure con confetture, cioccolato fuso, frutta fresca e panna montata. 
+                Ogni giorno si può realizzare un pancake diverso anche come impasto<ptr target="#impasto"/>: 
+                light senza uova, senza lievito o senza burro, pancake proteici per gli sportivi, 
+                ripieni di cioccolato per i golosi, oppure una versione super fluffy 
+                che arriva direttamente dal <placeName>Giappone</placeName>! Come si fa a resistere a tanta golosità? 
+                Se avete già l’acquolina in bocca e non volete aspettare la colazione, 
+                sappiate che i pancake allo sciroppo d'acero sono ottimi anche per la merenda!</p>
+            </div>
+
+            <div type="section" n="2" xml:id="ingredienti">
+                <list type="simple">
+                <head>Ingredienti</head>
+                <p>PER CIRCA 12 PANCAKE</p>
+                <item>125 g di farina 00;</item>
+                <item>25 g di burro;</item>
+                <item>2 uova (medie)<ptr target="#cnsg-uova"/>;</item>
+                <item>1 pizzico di sale fino;</item>
+                <item>200 g di latte intero 
+                (fresco <note n="1" place="bottom" resp="#MM">perché più corposo. 
+                Certo è che per varie problematiche si può usare latte diverso, o bavande alla soia, riso, kamut per intolleranze. 
+                Ma il gusto ne risente, a volte anche il colore e la densità</note>);</item>
+                <item>15 g di zucchero;</item>
+                <item>6 g di lievito in polvere per dolci.</item>
+                <p>Per guarnire:</p>
+                <item>sciroppo di acero q.b.</item>
+                </list>
+            </div>
+
+            <div type="section" n="3" xml:id="preparazione">
+                <head>Preparazione</head>
+                <p>COME PREPARARE I PANCAKE ALLO SCIROPPO D'ACERO</p>
+                <p>Per realizzare i pancake per prima cosa fate sciogliere il burro a fuoco bassissimo, poi lasciate intiepidire. 
+                Intanto separate gli albumi dai tuorli: versate i tuorli in una ciotola e sbatteteli con una frusta a mano, 
+                poi unite il burro fuso a temperatura ambiente e il latte a filo, continuando sempre a mescolare con la frusta. 
+                Aggiungete anche un pizzico di sale e montate il composto finché non risulterà chiaro.</p> 
+                <p>Ora montate gli albumi che avete tenuto da parte, versando poco alla volta lo zucchero. 
+                Quando saranno bianchi e spumosi incorporateli delicatamente al composto di tuorli, 
+                con movimenti dal basso verso l'alto, per evitare di smontarli. 
+                Scaldate a fuoco medio una crepiera o una padella antiaderente (meglio se a fondo spesso) 
+                e ungetela con pochissimo burro aiutandovi con della carta da cucina. 
+                Versate al centro del pentolino un mestolino di composto.</p>
+                <p>Dopo circa 2 minuti inizieranno a comparire delle bollicine in superficie, 
+                quindi girate il pancake con una spatolina e fate dorare anche l'altro lato per circa mezzo minuto. 
+                Proseguite così con il resto dell'impasto e disponete man mano i pancake su un piatto da portata, 
+                impilandoli uno sull'altro; con queste dosi otterrete all'incirca 12 pancake. 
+                Servite i vostri pancake allo sciroppo d'acero ancora caldi!</p>
+            </div>
+            
+            <div type="section" n="4" xml:id="conservazione">
+                <list type="instruction" rend="numbered">
+                <head>Conservazione</head>
+                <item>Si consiglia di servire subito i pancake.</item> 
+                <item>Potete conservare i pancake cotti in frigorifero per massimo 2 giorni, scaldandoli prima del consumo.</item>
+                <item>L'impasto si può conservare in frigorifero coperto con pellicola per un giorno al massimo.</item>
+                <item>Si sconsiglia la congelazione.</item>
+                </list>
+            </div>
+
+            <div type="section" n="5" xml:id="consiglio">
+                <p>In alternativa al lievito potete utilizzare un pizzico di bicarbonato.</p>
+            </div>
+
+            <div type="section" n="6" xml:id="curiosità">
+                <p>I lettori dei fumetti Disney li avranno sicuramente riconosciuti... 
+                i pancake non sono altro che le famose frittelle che <name>Paperino</name>, da bravo zio, 
+                preparava con cura ai tre nipotini <name>Qui</name>, <name>Quo</name> e <name>Qua</name>!</p>
+            </div>
+        </body>
+
+        <back>
+        </back>
+    </text>
+</TEI>
