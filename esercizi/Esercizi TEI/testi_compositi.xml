@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: testi_compositi.xml
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 26/04/2021 
+    Esercizio: Schema per codifica di testi compositi in XML TEI (rimpiazzando <body> con un <group>).
+-->
+
+<TEI>
+    <teiHeader> <!-- intestazione -->
+    </teiHeader>
+
+    <text>
+        <front> <!-- frontespizio del testo composito --> </front>
+
+        <group> <!-- <group raggruppa i vari testi e si sostituisce a <body> -->
+            <text>
+                <front> <!-- frontespizio del primo testo --> </front>
+                <body> <!-- corpo del primo testo --> </body>
+                <back> <!-- appendice del primo testo --> </back>
+            </text>
+
+            <text>
+                <front> <!-- frontespizio del primo testo --> </front>
+                <body>  <!-- corpo del primo testo --> </body>
+                <back>  <!-- appendice del primo testo --> </back>
+            </text>
+        </group>
+
+        <back> <!-- appendice del testo composito --> </back>
+
+    </text>
+</TEI>
