@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi aa 20-21.
+    Filename: 10b.marcatura_cartolina.xml
+    Author: Martina Mele
+    LM Informatica Umanistica
+    Date: 08/05/2022 
+    Esercizio:
+            - Codificare usando gli opportuni elementi TEI di un articolo di rivista (bibliografia)
+            - Codificare usando gli opportuni elementi TEI di una cartolina (fronte)
+-->
+
+<!DOCTYPE TEI SYSTEM "./tei_all.dtd">
+
+<TEI xmlns = "http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Edizione digitale di una cartolina (fronte)</title>
+
+                <respStmt>
+                    <resp>Codifica XML TEI a cura di:</resp>
+                        <name type="person" xml:id="MM">Martina Mele</name>
+                </respStmt>
+            </titleStmt>
+
+            <publicationStmt> <!-- elemento obbligatorio -->
+                <authority>Martina Mele</authority>
+                <pubPlace>Pisa</pubPlace>
+                <date>maggio 2022</date>
+                <availability status="restricted"><p>La lettura del documento è riservata al professore <persName><forename>Angelo</forename> <forename>Mario</forename> <surname>Del Grosso</surname></persName>.</p></availability>
+                
+            </publicationStmt>
+
+            <sourceDesc> <!-- elemento obbligatorio -->
+                <bibl xml:id="cartolina">
+                    <author></author>
+                    <title type="custom" resp="#LM">Guiglia - Stazione Climatica - Panorama</title>
+                    <biblScope unit="page">1</biblScope>
+                    <date>1918</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <p>Codifica effettuata seguendo le linee guida della TEI P5.</p>
+        </encodingDesc>
+
+    </teiHeader>
+
+    <text type="cartolina">
+        <front></front>
+        <body>
+            <div type="fronte">
+                <figure>
+                    <head>Guiglia - Stazione Climatica - Panorama</head>
+                    <graphic url="3.7694-226F.jpg"/>
+                    <figDesc>L'immagine rappresenta un panorama in cui è ritratta la stazione climatica di
+                    <placeName>Guiglia</placeName>, comune italiano in provincia di <placeName>Modena</placeName>.</figDesc>
+                </figure>
+            </div>
+        </body>
+        <back></back>
+    </text>
+    
+</TEI>
