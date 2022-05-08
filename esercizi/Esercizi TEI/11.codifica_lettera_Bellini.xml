@@ -4,7 +4,8 @@
     Author: Martina Mele
     LM Informatica Umanistica
     Date: 08/05/2022 
-    Esercizio: Codificare lettera Bellini utilizzando il tagset facsimile e il collegamento completo testo-immagine -->
+    Esercizio: Trascrivere e codificare un frammento di lettera di Bellini (Vincenzo Bellini a Carlo Pepoli, in Puteaux, 26 giugno 1834).
+               Aiutarsi con le trascrizioni presenti nel repository GitHub (la trascrizione è in Seminara2017). -->
 
     <!DOCTYPE TEI SYSTEM "./tei_all.dtd">
 
